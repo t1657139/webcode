@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Table Sort</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta charset="UTF-8">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">      
+        <script src="https://kit.fontawesome.com/a9d212ab10.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+    </head>
+
+    <body>
+        <table class="table table-striped table-sort" id="table-1">
+            <thead>
+            <th>
+                <span>
+                    公告日期
+                </span>
+                <div class="sort-buttons">
+                    <p onclick="sortAsc('table-1', 0)" class="sort-button fas fa-angle-up "></p>
+                    <p onclick="sortDec('table-1', 0)" class="sort-button fas fa-angle-down "></p>
+                </div>
+            </th>
+            <th>
+                <span>
+                    標題
+                </span>
+                <div class="sort-buttons">
+                    <p onclick="sortAsc('table-1', 1)" class="sort-button fas fa-angle-up "></p>
+                    <p onclick="sortDec('table-1', 1)" class="sort-button fas fa-angle-down "></p>
+                </div>
+            </th>
+            <th>
+                <span>
+                    參考網址
+                </span>
+                <div class="sort-buttons">
+                    <p onclick="sortAsc('table-1', 2)" class="sort-button fas fa-angle-up "></p>
+                    <p onclick="sortDec('table-1', 2)" class="sort-button fas fa-angle-down "></p>
+                </div>
+            </th>
+            <th>
+                <span>
+                    下載網址
+                </span>
+                <div class="sort-buttons">
+                    <p onclick="sortAsc('table-1', 3)" class="sort-button fas fa-angle-up "></p>
+                    <p onclick="sortDec('table-1', 3)" class="sort-button fas fa-angle-down "></p>
+                </div>
+            </th>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>110/03/27</td>
+                    <td>大港開唱</td>
+                    <td></td>
+                    <td><a>附件一</a></td>
+                </tr>
+                <tr>
+                    <td>110/03/16</td>
+                    <td>李國鼎科技發展基金會台達荷蘭環境獎學金 開放申請!</td>
+                    <td><a><i class="fas fa-link"></i></a></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>109/03/15</td>
+                    <td>白曉燕文教基金警察子女獎助學金 開放申請!</td>
+                    <td><a><i class="fas fa-link"></i></a></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>100/05/15</td>
+                    <td>台灣Panasonic獎學金 開放申請!【申請書請送至學務處17號櫃台寄送】</td>
+                    <td></td>
+                    <td><a>附件一</a></td>
+                </tr>
+                <tr>
+                    <td>110/03/27</td>
+                    <td>高雄流行音樂中心　壓力測試</td>
+                    <td><a><i class="fas fa-link"></i></a></td>
+                    <td></td>
+                </tr>
+            </tbody>
+        </table>
+
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="js/tablesort.js"></script>
+    </body>
+</html>

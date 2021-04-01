@@ -1,0 +1,83 @@
+/*CHECK BOX*/
+.checkbox {
+    display: flex;
+    align-items: center;
+    position: relative;
+    margin: 10px;
+}
+.checkbox:hover .checktick {
+    background-color: rgb(24, 99, 24);;
+}
+.checkbox input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+    position: absolute;
+}
+.checktick {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+    background-color: rgb(32, 131, 32);
+    color: white;
+    border-radius: 5px;
+}
+.checktick::after {
+    font-family: FontAwesome;
+    content: "\f00c";
+    color: white;
+    position: absolute;
+    left: 11px;
+    top: 10px;
+    display: none;
+}
+.checkbox input:checked ~ .checktick::after {
+    display: block;
+}
+.checkbox-text {
+    display: inline-block;
+    margin: 0;
+}
+
+/*RAIO BOX*/
+.radiobox {
+    display: flex;
+    align-items: center;
+    position: relative;
+    margin: 10px;
+}
+.radiobox:hover .radiotick {
+    background-color: rgb(24, 99, 24);;
+}
+.radiobox input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+    position: absolute;
+}
+.radiotick {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+    background-color: rgb(32, 131, 32);
+    color: white;
+    border-radius: 5px;
+}
+.radiobox input ~ .radiotick::after {
+    font-family: FontAwesome;
+    content: "\f00c";
+    color: white;
+    position: absolute;
+    left: 11px;
+    top: 10px;
+    display: none;
+}
+.radiobox input:checked ~ .radiotick::after {
+    display: block;
+}
+.radiobox-text {
+    display: inline-block;
+    margin: 0;
+}

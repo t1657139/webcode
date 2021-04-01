@@ -1,0 +1,17 @@
+.table-sort th {
+    position: relative;
+}
+.sort-buttons {
+    display: inline-block;
+    position: absolute;
+    margin-left: 5px;
+    top: 15px;
+}
+.sort-button {
+    margin : -7px 0px;
+    display: block;
+}
+.sort-button:hover {
+    opacity: 0.7;
+    transition: .15s;
+}
