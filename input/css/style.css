@@ -58,7 +58,9 @@
     position: absolute;
 }
 .radiotick {
-    display: inline-block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 40px;
     height: 40px;
     margin-right: 10px;
@@ -72,9 +74,6 @@
     content: " \f111";
     font-weight: 900;
     color: white;
-    position: absolute;
-    left: 10px;
-    top: 9.2px;
     display: none;
 }
 .radiobox input:checked ~ .radiotick::after {
