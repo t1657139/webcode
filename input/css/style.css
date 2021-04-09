@@ -28,8 +28,8 @@
     content: "\f00c";
     color: white;
     position: absolute;
-    left: 11px;
-    top: 10px;
+    left: 10.8px;
+    top: 9px;
     display: none;
 }
 .checkbox input:checked ~ .checktick::after {
@@ -61,17 +61,17 @@
     width: 40px;
     height: 40px;
     margin-right: 10px;
+    border-radius: 50%;
     background-color: rgb(32, 131, 32);
     color: white;
-    border-radius: 5px;
 }
 .radiobox input ~ .radiotick::after {
     font-family: FontAwesome;
     content: "\f00c";
     color: white;
     position: absolute;
-    left: 11px;
-    top: 10px;
+    left: 10.8px;
+    top: 9px;
     display: none;
 }
 .radiobox input:checked ~ .radiotick::after {
