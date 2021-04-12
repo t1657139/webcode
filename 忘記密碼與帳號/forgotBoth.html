@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>forgot Account & Password</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+    <div class="wrapper">
+        <div class="brand">
+            <h1 class=>忘記帳號與密碼</h1>
+            <p>Forgot Account & Password</p>
+        </div>
+        <div class="procedure">
+            <div class="step step-active">
+                <div class="step-order">
+                    <p>1</p>
+                </div>
+                <div class="step-content">
+                    <p>身分驗證</p>
+                    <span class="text-small">Identity verification</span>
+                </div>
+            </div>
+            <div class="step">
+                <div class="step-order">
+                    <p>2</p>
+                </div>
+                <div class="step-content">
+                    <p>填寫帳號與驗證碼</p>
+                    <span class="text-small">Please enter the account and captcha number verification</span>
+                </div>
+            </div>
+            <div class="step">
+                <div class="step-order">
+                    <p>3</p>
+                </div>
+                <div class="step-content">
+                    <p>修改密碼</p>
+                    <span class="text-small">Reset password</span>
+                </div>
+            </div>
+        </div>
+        <div name="content1" class="content mt-5rem content-active">
+            <div class="inputform">
+                <label class="inputlabel">
+                    <input class="inputbox" type="text" placeholder="請輸入身分證" value="">
+                    <span class="input-eng-translation left-5word">Please enter your ID number</span>
+                </label>
+                <p class="my-1point5rem">我不是機器人<span class="text-small ml-0point5rem">I'm not a robot.</span></p>
+                <button class="step-button">
+                    <p>取得信件</p>
+                    <p class="text-small">Send e-mail</p>
+                </button>
+            </div>
+            <div class="infobox">
+                <ul class="infolist">
+                    <li class="info"> 注意：信件有可能被誤判為垃圾信，請先至「垃圾信匣」查看。若仍收不到信件，請與電算中心聯繫。</li>
+                    <li class="info"> Note:The e-mail may be misjudged as junk mail by system, please check the spam first.<br>If you still can not receive the e-mail, please contact Computer Center for details.</li>
+                </ul>
+            </div>
+        </div>
+        <div name="content2" class="content mt-5rem ">
+            <div class="inputform">
+                <label class="inputlabel">
+                    <input class="inputbox" type="text" placeholder="請輸入帳號" value="">
+                    <span class="input-eng-translation left-5word">Please enter the ID number</span>
+                </label>
+                <label class="inputlabel">
+                    <input class="inputbox my-0point7rem" type="text" placeholder="請輸入驗證碼" value="">
+                    <span class="input-eng-translation left-6word">Please enter the verification code</span>
+                </label>
+                <div class="infobox my-0point7rem">
+                    <ul class="infolist">
+                        <li class="info">請至信箱確認驗證碼</li>
+                        <li class="info">Please check the xxx e-mail address to retrieve the informations</li>
+                    </ul>
+                </div>                
+                <button class="step-button">
+                    <p>下一步</p>
+                    <p class="text-small">Next</p>
+                </button>
+            </div>
+        </div>
+        <div name="content3" class="content mt-5rem ">
+            <div class="inputform">
+                <label class="inputlabel">
+                    <input class="inputbox" type="text" placeholder="請輸入新密碼" value="">
+                    <span class="input-eng-translation left-6word">Please enter new password</span>
+                </label>
+                <label class="inputlabel">
+                    <input class="inputbox my-0point7rem" type="text" placeholder="請輸入驗證確認新密碼" value="">
+                    <span class="input-eng-translation left-10word">Confirm new password</span>
+                </label>
+                <div class="infobox my-0point7rem">
+                    <ul class="infolist">
+                        <li class="info">密碼不得少於8碼密碼，不得與上次密碼相同，至少必須包含英文大寫字母、小寫字母、數字、特殊符號（不含'<'底線）；</li>
+                        <li class="info">The new password must contains at least eight characters long and it's significantly different from previous passwords. The password also needs to contain uppercase letters, lowercase letters, number, and symbols. (Not include '<' and underline)</li>
+                    </ul>
+                </div>                     
+                <button class="step-button">
+                    <p>修改</p>
+                    <p class="text-small">Confirm／Modify／Save changes</p>
+                </button>
+            </div>
+        </div>
+    </div>
+    
+    <script src="js/index.js"></script>
+</body>
+</html>

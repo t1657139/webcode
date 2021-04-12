@@ -1,0 +1,248 @@
+html, body {
+    box-sizing: border-box;
+    font-family: sans-serif;
+    font-weight: 600;
+    font-size: 20px;
+    margin: 0;
+}
+
+p {
+    margin: 0;
+}
+ul {
+    padding-inline-start: 0.7rem;
+}
+.wrapper {
+    width: 1000px;
+    margin: auto;
+}
+/*BRAND*/
+.brand {
+    margin: 4.5rem auto 2.5rem;
+    text-align: center;
+    color: #878C75;
+    font-weight: 600;
+}
+
+.brand h1 {
+    font-size: 1.5rem;
+    margin: 0.4rem;
+    color: #34494E;
+}
+/*PROCEDURE*/
+.procedure {
+    margin: 2.5rem auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    color: #878C75
+}
+.procedure::before {
+    content: "";
+    position: absolute;
+    display: block;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    border-top: 1px solid #34494E;
+    width: 100%;
+    z-index: -1;
+}
+.step {
+    color: #878C75;
+    display: flex;
+    align-items: center;
+    background-color: white;
+    padding: 0 1rem;
+}
+
+.step-order {
+    display: inline-block;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    background-color: #D7DBBA;
+    margin-right: 1rem;
+}
+
+.step-order p {
+    text-align: center;
+    line-height: 2rem;
+    font-family: serif; /*字體待確認*/
+    font-weight: 600;
+    font-size: 1.2rem;
+    color: #878C75; /*ACTIVE時要改#F5F3EB*/
+}
+.step-active .step-order {
+    background-color: #34494E;
+}
+.step-active .step-order p {
+    color: #F5F3EB;
+}
+.step-active .step-content {
+    color: #34494E;
+}
+
+.step-content {
+    display: inline-block;
+}
+/* CONTENT */
+.content {
+    width: 768px;
+    margin: 2rem auto;
+    color: #34494E; 
+    display: none;
+}
+.content-active {
+    display: block;
+}
+.inputform {
+    width: 375px;
+    margin: auto;
+}
+.inputform input {
+    background-color: transparent;
+    outline: none;
+    border: none;
+    border-bottom: 1px solid #34494E;
+    width: 100%;
+    padding: 0.5rem 0;
+    font-size: 1rem;
+    font-weight: 600;
+}
+.inputform input::placeholder {
+    color: #D7DBBA;
+}
+.inputlabel {
+    position: relative;
+}
+.inputlabel .input-eng-translation {
+    display: inline-block;
+    user-select: none;
+    -webkit-user-select: none;
+    position: absolute;
+    width: max-content;
+    overflow: visible;
+    top: 1rem;
+    transform: translate(0, -100%);
+    color: #D7DBBA;
+    font-size: 0.3rem;
+    z-index: -1;
+}
+.left-6word{
+    left: 6.5rem; /*Placeholder有6個字寬度為6rem + 中間的空間 0.5rem */
+}
+.left-5word{
+    left: 5.5rem; /*Placeholder有5個字寬度為6rem + 中間的空間 0.5rem */
+}
+.left-10word{
+    left:10.5rem;
+}
+button {
+    display: block;
+    margin: 6rem auto 2rem;
+    padding: 0.5rem 0;
+    text-align: center;
+    background-color: transparent;
+    color: #c2c272;
+    border: 2px solid #C2C272;
+    border-radius: 3px;
+    width: 100%;
+    max-width: 375px;
+    font-size: 1rem;
+    font-weight: 600;
+    outline: none;
+}
+button:hover {
+    background-color: #C2C272;
+    color: #F5F3EB;
+} 
+/*infobox*/
+.infobox {
+    font-size: 0.7rem;
+}
+.infobox .infolist {
+    width: fit-content;
+    list-style: none '\203B' outside;
+    margin: auto;
+}
+.infobox .infolist .info {
+    padding: 0.2rem 0rem;
+}
+/**/
+
+@media (max-width:1000px) {
+    .wrapper {
+        width: 100%;
+    }
+    .procedure{
+        justify-content: center;
+    }
+    .procedure::before {
+        display: none;
+    }
+    .step {
+        display: none;
+    }
+    .step-active {
+        display: flex;
+    }
+
+
+}
+
+@media (max-width:768px) {
+    html, body {
+        font-size: 16px;
+    }
+    .content {
+        width: 80%;
+    }
+    .inputform {
+        width: 100%;
+    }
+    .infobox .infolist {
+        width: 100%;
+    }
+}
+@media (max-width:425px) {
+    html, body {
+        font-size: 14px;
+    }
+    .sm-w-80 {
+        width: 80%;
+    }
+}
+
+
+
+/* Utility */
+.text-small {
+    font-size: 0.3rem;
+}
+.text-large {
+    font-size: 1.5rem;
+}
+.ml-0point5rem {
+    margin-left: 0.5rem;
+}
+.my-1point5rem {
+    margin: 1.5rem 0;
+}
+.my-0point7rem {
+    margin: 0.7rem 0;
+}
+.mt-5rem {
+    margin-top: 5rem;
+}
+.text-center {
+    text-align: center;
+}
+.color-878C75 {
+    color: #878C75;
+}
+.margin-auto {
+    margin: auto;
+}
