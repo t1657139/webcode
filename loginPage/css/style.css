@@ -86,7 +86,6 @@ button {
 .loginbox button:hover {
     color: #F5F3EB;
     background-color: #C2C272;
-    transition: .15s;
 }
 .input-eng-translation {
     display: inline-block;
