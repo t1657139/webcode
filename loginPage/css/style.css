@@ -56,9 +56,17 @@ button {
     display: inline-block;
     margin: auto;
 }
+.login {
+    color: #858A75;
+    margin-bottom:  1.5rem;
+}
+.login p {
+    margin: 0 0 0.2rem;
+}
 .loginbox label {
     color: #858A75;
-    display: block;
+    display: flex;
+    align-items: center;
     position: relative;
 }
 .loginbox input {
@@ -67,8 +75,7 @@ button {
     display: block;
     border-bottom: 2px solid #34494E;
     color: #858A75;
-    padding: 0.7rem 0 0.5rem;
-    margin-bottom:  1.5rem;
+    padding: 0.5rem 0;
 }
 .loginbox input::placeholder {
     color: #D8DDBC;
@@ -94,10 +101,8 @@ button {
     position: absolute;
     width: max-content;
     overflow: visible;
-    bottom: 0rem;
-    transform: translate(0, -100%);
     color: #D7DBBA;
-    font-size: 0.3rem;
+    font-size: 0.6rem;
     z-index: -1;
 }
 .left-6word{
@@ -133,6 +138,10 @@ button {
     width: 6rem;
     display: inline-block;
 }
+.buttonimage-blank {
+    width: 6rem;
+    display: inline-block;
+}
 .button p {
     text-align: center;
     margin:0.5rem 0 0.3rem;
@@ -140,7 +149,7 @@ button {
 }
 .button span {
     display: block;
-    font-size: 0.5rem;
+    font-size: 0.6rem;
     color: #858A75;
 }
 
