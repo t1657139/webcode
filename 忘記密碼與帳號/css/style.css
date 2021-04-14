@@ -117,6 +117,8 @@ ul {
 }
 .inputlabel {
     position: relative;
+    display: flex;
+    align-items: center;
 }
 .inputlabel .input-eng-translation {
     display: inline-block;
@@ -125,10 +127,8 @@ ul {
     position: absolute;
     width: max-content;
     overflow: visible;
-    top: 1rem;
-    transform: translate(0, -100%);
     color: #D7DBBA;
-    font-size: 0.3rem;
+    font-size: 0.6rem;
     z-index: -1;
 }
 .left-6word{
@@ -220,7 +220,7 @@ button:hover {
 
 /* Utility */
 .text-small {
-    font-size: 0.3rem;
+    font-size: 0.6rem;
 }
 .text-large {
     font-size: 1.5rem;
