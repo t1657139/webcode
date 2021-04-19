@@ -259,12 +259,14 @@ nav.fix-top {
     justify-content: center;
     width: 7vw;
     height: 7vw;
+    max-width: 6.4rem;
+    max-height: 6.4rem;
     min-width: 4.5rem;
     min-height: 4.5rem;
     border-right: 1px solid #fff;
     border-bottom: 1px solid #fff;
     background-color: #efefef;
-    font-size: 0.7rem;
+    font-size: 0.8rem;
     color: #060d39;
 }
 .service-card:hover {
@@ -273,13 +275,13 @@ nav.fix-top {
 }
 .service-card span {
     text-align: center;
-    width: 2.8rem;
+    width: 3.2rem;
 }
 /* SIDE-BUTTONS */
 .side-buttons {
     display: none;
     width: 2.8rem;
-    margin-right: 1rem;
+    margin-right: 2rem;
     position: fixed;
     right: 0;
     bottom: 50%;
