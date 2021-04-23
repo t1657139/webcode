@@ -455,6 +455,8 @@ footer {
     .service-card {
         width: 100%;
         height: initial;
+        max-width: initial;
+        max-height: initial;
         min-width: initial;
         min-height: initial;
         justify-content: start;
