@@ -6,6 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta charset="UTF-8">
         <link rel="stylesheet" type="text/css" href="css/style.css">
+        <script defer src="https://use.fontawesome.com/releases/v5.0.10/js/all.js" integrity="sha384-slN8GvtUJGnv6ca26v8EzVaR9DC58QEwsIk9q1QXdCU8Yu8ck/tL/5szYlBbqmS+" crossorigin="anonymous"></script>
     </head>
     <body>
         <header id="header">
@@ -19,10 +20,13 @@
                     <p>STUDENT<br><span>學生專區</span></p>                  
                 </div>
             </a>
-            <div class="header-right">
+            <div id="header-right-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+            <div id="header-right" class="header-right">
                 <div>
-                    <a class="button" href="#">
-                    修改密碼
+                    <a href="#">
+                    登出, 石喻仁
                     </a>
                 </div>
                 <div>
@@ -30,12 +34,12 @@
                     English
                     </a>
                 </div>
-                <div class="search">
-                    <img class="header-icon hoverable-image" src="images/header/ICON-80.png">
-                    <img class="header-icon hovering-image" src="images/header/ICON-81.png">
-                    <input placeholder="Search...">
-                </div>
-            </div>  
+                <div id="search">
+                    <img class="header-icon hoverable-image " src="images/header/ICON-80.png">
+                    <img class="header-icon hovering-image " src="images/header/ICON-81.png">
+                    <input class="" placeholder="Search...">
+                </div>      
+            </div>
         </header>
 
         <nav id="nav">

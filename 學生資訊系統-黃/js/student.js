@@ -2,10 +2,14 @@
 const header = document.getElementById("header");
 const nav = document.getElementById("nav");
 const footer = document.getElementById("footer");
-const goTop = document.getElementById("go-top");         
+const goTop = document.getElementById("go-top");
+const search = document.getElementById("search");
+const headerRight = document.getElementById("header-right");
+const headerRightToggle = document.getElementById('header-right-toggle');      
 const bigIndexButtons = document.getElementsByClassName("big-index-button");  
 const services = document.getElementsByClassName("service");
 const sideButtons = document.getElementsByClassName("side-button");
+
 
 /* 執行 */
 window.addEventListener('scroll', () => {
@@ -16,6 +20,8 @@ window.addEventListener('scroll', () => {
 bigIndexButtonOnClick();
 sideButtonOnclick();
 goTopOnClick();
+searchDisplay();
+headerRightToggleClick();
 
 /*FUNCTIONS */
 /* 設定NAV在fix top */
@@ -113,5 +119,27 @@ function goTopOnClick() {
             top: 0,
             behavior: 'smooth',
         });
+    });
+}
+/* 控制search的顯示 */
+function searchDisplay() {
+    let searchIcon = search.children[0]
+    let searchIconHover = search.children[1];
+    let searchInput = search.children[2]; 
+    searchIconHover.addEventListener('click', () => {
+        searchIconHover.classList.add("d-none");
+        searchIcon.classList.add("d-none");
+        searchInput.classList.add("d-block");
+        searchInput.focus();
+    });
+    searchInput.addEventListener('blur', () => {
+        searchIconHover.classList.remove("d-none");
+        searchIcon.classList.remove("d-none");
+        searchInput.classList.remove("d-block");
+    })
+}
+function headerRightToggleClick() {
+    headerRightToggle.addEventListener('click',() => {
+        headerRight.style.display = headerRight.style.display == 'flex' ? 'none' : 'flex' ;
     });
 }

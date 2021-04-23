@@ -37,11 +37,12 @@ header {
 }
 .header-left {
     height: 100%;
+    display: flex;
+    align-items: center;
 }
 .brand {
-    height: 100%;
+    width: 7rem;
     display: block;
-    padding: 0.25rem 0;
 }
 
 .header-center {
@@ -64,23 +65,30 @@ header {
     align-items: center;
     justify-content: center;
     font-size: 0.7rem;
-
+    font-weight: 600;
+}
+#header-right-toggle {
+    display: none;
+    height: 4rem;
+    width: 4rem;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    cursor: pointer;
+}
+#header-right-toggle:hover {
+    background-color: #8f7468;
+    transition: .15s;
 }
 .header-right div {
     display: flex;
     align-items: center;
     justify-content: center;
     height: 1.4rem;
-    margin: 0 3vmin;
+    padding: 0 1vw;
 }
-.header-right .button {
-    color: black;
-    background-color: rgb(207, 207, 207);
-    padding: 0.35rem 1rem;
-    border-radius: 7px;
-}
-.header-right .button:hover {
-    background-color: #fff;
+.header-right #search {
+    position: relative;
 }
 .header-right a {
     color: #fff;
@@ -88,24 +96,25 @@ header {
 .header-right a:hover {
     border-bottom: 1px solid #fff;
 }
-.header-right input {
+#search input {
+    position: absolute;
     display: none;
     outline: none;
     border: none;
-    border-radius: 15px;
-    height: 1.4rem;
-    padding: 0 0.7rem;
+    border-radius: 30px;
+    height: 2.1rem;
+    padding: 0.35rem 0.7rem;
 }
-.search .hoverable-image {
+#search .hoverable-image {
     display: block;
 }
-.search .hovering-image {
+#search .hovering-image {
     display: none;
 }
-.search:hover .hoverable-image  {
+#search:hover .hoverable-image  {
     display: none;
 }
-.search:hover .hovering-image {
+#search:hover .hovering-image {
     display: block;
 }
 /* NAV */
@@ -132,10 +141,9 @@ nav.fix-top {
     width: 100%;
     padding: 1rem 0rem;
     text-align: center;
-    color: #6b757f;
 }
 .navbar-item:hover .item-title {
-    color: #bf937f;
+    color:#bf937f;
 }
 .item-list {
     display: none;
@@ -154,16 +162,6 @@ nav.fix-top {
     padding: 0.3rem 1rem;
     cursor: pointer;
     width: 100%;
-    color: #6b757f;
-}
-.item-header {
-    padding: 0.3rem 1rem;
-    cursor: pointer;
-    width: 100%;
-    color: #6b757f;
-}
-.item a {
-    color: #6b757f;
 }
 .item:hover {
     color: #6b757f;
@@ -181,6 +179,7 @@ nav.fix-top {
 
     70% {
         opacity: 100%;
+        transform: translateY(-1%);
     }
 
     100% {
@@ -263,15 +262,12 @@ nav.fix-top {
     align-content: center;
     margin: auto;
 }
-.service-title {
-    font-size: 0.7rem;
-    color: #6b757f;
-    width: 100%;
-}
 .service-card {
     display: flex;
     align-items: center;
     justify-content: center;
+    max-width: 5.3rem;
+    max-height: 5.3rem;
     width: 7vw;
     height: 7vw;
     min-width: 4.5rem;
@@ -285,7 +281,7 @@ nav.fix-top {
 }
 .service-card:hover {
     color: #6b757f;
-    background-color:  #fff467;
+    background-color: #fff467;
 }
 .service-card span {
     text-align: center;
@@ -345,7 +341,7 @@ footer {
 .footer-left img {
     display: block;
     height: 1.2rem;
-    margin: 0.5rem 0;
+    margin: 0.5rem;
 }
 .footer-left span {
     color: #fff;
@@ -363,7 +359,7 @@ footer {
 }
 .footer-right span {
     color: #fff;
-    font-size: 0.7rem;
+    font-size: 12px;
     display: none;
 }
 
@@ -374,6 +370,35 @@ footer {
 }
 
 @media (max-width: 767px) {
+    /* HEADER */
+    header {
+        justify-content: space-between;
+    }
+    .header-left {
+        padding-left: 0.7rem;
+    }
+    .brand {
+        width: 25vw;
+        max-width: 7rem;
+    }
+    .header-right {
+        display: none;
+        position: absolute;
+        width: 100%;
+        top: 4rem;
+        flex-wrap: wrap;
+        z-index: 10;
+        background-color: rgba(143, 116, 104, 0.8);
+    }
+    .header-right div {
+        width: 100%;
+        height: 3rem;
+        padding: 0.8rem 1vw;
+    }
+    #header-right-toggle {
+        display: flex;
+    }
+
     /* TABLET 隱藏 NAV */
     nav {
         display: none;
@@ -427,9 +452,6 @@ footer {
     .service-box {
         width: 100%;
     }
-    .service-title {
-        font-size: 1rem;
-    }
     .service-card {
         width: 100%;
         height: initial;
@@ -452,6 +474,11 @@ footer {
     /*TABLET FOOTER */
     .footer {
         padding: 0;
+        width: 100%;
+    }
+    .footer-left {
+        width: min-content;
+        margin-left: 0.1rem;
     }
     .footer-left img {
         height: 5vw;
@@ -459,6 +486,10 @@ footer {
     }
     .footer-left span, .footer-right img {
         display: none;
+    }
+    .footer-right {
+        width: max-content;
+        margin-right: 0.1rem;
     }
     .footer-right span {
         display: block;
@@ -468,7 +499,7 @@ footer {
 
 /* Utility */
 .d-none {
-    display: none !important; 
+    display: none !important;
 }
 .d-block {
     display: block !important;
