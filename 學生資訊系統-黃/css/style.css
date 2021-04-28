@@ -80,7 +80,10 @@ header {
     background-color: #8f7468;
     transition: .15s;
 }
-.header-right div {
+#header-right-content {
+    display: flex;
+}
+#header-right-content div {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -135,12 +138,13 @@ nav.fix-top {
     position: relative;
     flex-grow: 1;
     max-width: 8rem;
-    cursor: pointer;
 }
 .item-title {
     width: 100%;
     padding: 1rem 0rem;
     text-align: center;
+    color: #6b757f;
+    cursor: pointer;
 }
 .navbar-item:hover .item-title {
     color:#bf937f;
@@ -163,12 +167,21 @@ nav.fix-top {
     cursor: pointer;
     width: 100%;
 }
+.item a {
+    color: #6b757f;
+}
 .item:hover {
     color: #6b757f;
     background-color: #fff467;
 }
 .item:hover a {
     color: #6b757f;
+}
+.item-header{
+    width: 100%;
+    padding: 0.3rem 1rem;
+    color: #6b757f;
+    font-size: 0.7rem;
 }
 /*BIG INDEX*/
 @keyframes big-index-ease-in {
@@ -266,16 +279,12 @@ nav.fix-top {
     display: flex;
     align-items: center;
     justify-content: center;
-    max-width: 5.3rem;
-    max-height: 5.3rem;
-    width: 7vw;
-    height: 7vw;
-    min-width: 4.5rem;
-    min-height: 4.5rem;
+    width: 4.5rem;
+    height: 4.5rem;
     border-right: 1px solid #fff;
     border-bottom: 1px solid #fff;
     background-color: #eeeeee;
-    font-size: 0.7rem;
+    font-size: 0.75rem;
     color: #6b757f;
     border-radius: 5px;
 }
@@ -285,7 +294,7 @@ nav.fix-top {
 }
 .service-card span {
     text-align: center;
-    width: 2.8rem;
+    width: 3rem;
 }
 /* SIDE-BUTTONS */
 .side-buttons {
@@ -362,7 +371,16 @@ footer {
     font-size: 12px;
     display: none;
 }
-
+@media (min-width: 1440px) {
+    .service-card {
+        width: 7vw;
+        height: 7vw;
+        font-size: 1vw;
+    }
+    .service-card span {
+        width: 4vw;
+    }
+}
 @media (max-width: 1025px) {
     .big-index-buttons {
         width: 70%;
@@ -381,16 +399,25 @@ footer {
         width: 25vw;
         max-width: 7rem;
     }
-    .header-right {
-        display: none;
+    #header-right-content {
+        display: flex;
         position: absolute;
         width: 100%;
+        height: 0;
         top: 4rem;
+        left: 0;
         flex-wrap: wrap;
         z-index: 10;
         background-color: rgba(143, 116, 104, 0.8);
+        overflow: hidden;
+        transition: height .5s .1s;
     }
-    .header-right div {
+    #header-right-content.slide-down-display {
+        height: 9rem;
+        border-bottom: 5px solid #fff;
+        transition: height .5s .1s;
+    }
+    #header-right-content div {
         width: 100%;
         height: 3rem;
         padding: 0.8rem 1vw;

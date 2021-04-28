@@ -4,7 +4,7 @@ const nav = document.getElementById("nav");
 const footer = document.getElementById("footer");
 const goTop = document.getElementById("go-top");
 const search = document.getElementById("search");
-const headerRight = document.getElementById("header-right");
+const headerRightContent = document.getElementById("header-right-content");
 const headerRightToggle = document.getElementById('header-right-toggle');      
 const bigIndexButtons = document.getElementsByClassName("big-index-button");  
 const services = document.getElementsByClassName("service");
@@ -138,8 +138,9 @@ function searchDisplay() {
         searchInput.classList.remove("d-block");
     })
 }
+/* 控制header-right在行動裝置(width < 768px)上的顯示 */
 function headerRightToggleClick() {
     headerRightToggle.addEventListener('click',() => {
-        headerRight.style.display = headerRight.style.display == 'flex' ? 'none' : 'flex' ;
+        headerRightContent.classList.toggle("slide-down-display");
     });
 }
