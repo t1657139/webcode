@@ -39,7 +39,8 @@ button {
     height: 5rem;
 }
 .blank {
-    width: calc(450px + 3rem); /*4rem = .boxes的padding*2，目的是為了讓.header和.boxes的flex-wrap同時觸發*/
+    width: calc(450px + 3rem); /*3rem = .boxes的padding*2，目的是為了讓.header和.boxes的flex-wrap同時觸發*/
+    padding: 0 1.5rem;
     margin: auto;
 }
 
